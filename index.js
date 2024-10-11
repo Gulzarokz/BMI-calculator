@@ -4,10 +4,20 @@ window.onload = () => {
     button.addEventListener('click', calculateBmi)
 }
 
+// BMI calulator Button
 function calculateBmi() {
-    const height = document.querySelector('#height');
-    const width = document.querySelector('#width');
-    console.log(document.querySelector('#height').value);
+    const height = document.querySelector('#height').value;
+    const width = document.querySelector('#width').value;
+    const result = document.querySelector('#result');
+
+    // validate the input field
+    if(!height || isNaN(height) || height < 0) {
+
+        result.innerText = "Please provide valid height";
+        
+    }else if(!width || isNaN(width) || width < 0) {
+        result.innerText = "Please provide valid width";
+    }
     
     
 }
