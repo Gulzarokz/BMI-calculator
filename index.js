@@ -13,6 +13,7 @@ function calculateBmi() {
     // validate the input field
 
     if(!height || isNaN(height) || height < 0) {
+    
 
         result.innerText = "Please provide valid height";
         
@@ -28,20 +29,20 @@ function calculateBmi() {
 
     // using the if else if to verify the required condition
 
-    if(bmi < 18.5) 
+    if (bmi < 18.5) 
     {
         result.innerText = `You are under Weigth: ${bmi}`;
     }
 
-    else if(bmi >= 18.5 && bmi < 24.9) 
+    else if (bmi >= 18.5 && bmi < 24.9) 
     {
         result.innerText = `You are normal Weight: ${bmi}`;
     }
-    else if(bmi >= 25 && bmi < 29.9)
+    else if (bmi >= 25 && bmi < 29.9)
      {
         result.innerText = `You are OverWeight: ${bmi}`;
     }
-    else if(bmi >= 30 && bmi < 34.9) 
+    else if (bmi >= 30 && bmi < 34.9) 
     {
         result.innerText = `obesity: ${bmi}`;
     }
@@ -49,6 +50,9 @@ function calculateBmi() {
     {
         result.innerText = ` Extrem obesity: ${bmi}`;
     }
+
+    document.getElementById("weight").value = '';
+    document.getElementById("height").value = '';
 
     }
     
